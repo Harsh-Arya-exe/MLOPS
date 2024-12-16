@@ -1,0 +1,13 @@
+prefix=D:/MLOPS/mlops9/MLOPS/env/Library
+exec_prefix=D:/MLOPS/mlops9/MLOPS/env/Library
+libdir=D:/MLOPS/mlops9/MLOPS/env/Library/lib
+sharedlibdir=D:/MLOPS/mlops9/MLOPS/env/Library/lib
+includedir=D:/MLOPS/mlops9/MLOPS/env/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
