@@ -5,7 +5,7 @@ seaborn
 flask
 mlflow==2.19.0
 dvc
-
+ipykernel
 
 
 pytest==7.1.3
