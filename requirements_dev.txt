@@ -6,6 +6,7 @@ flask
 mlflow==2.22.1
 dvc
 ipykernel
+xgboost
 
 -e .
 
