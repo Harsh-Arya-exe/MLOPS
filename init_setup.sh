@@ -1,15 +1,15 @@
 echo [$(date)]: 'START'
 
-echo [$(date)]: 'creating env with python 3.12 version'
+echo [$(date)]: 'creating env with python'
 
-conda create -p ./env python=3.12 -y
+python -m venv env
 
-echo[$(date)]: 'activating the environment'
+echo [$(date)]: 'activating the environment'
 
 source activate ./env
 
-echo[$(date)]: "installing the dev requirements"
+echo [$(date)]: "installing the dev requirements"
 
-pip install -r requirements.txt
+pip install -r requirements_dev.txt
 
-echo[$(date)]: 'END'
+echo [$(date)]: 'END'
