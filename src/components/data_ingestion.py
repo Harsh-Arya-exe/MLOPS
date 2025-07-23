@@ -47,14 +47,14 @@ class DataIngestion:
             """
             
             logging.info("Creating the artifact folder")
-            os.makedirs(os.path.dirname(self.data_ingestion_config.raw_path))
+            os.makedirs(os.path.dirname(self.data_ingestion_config.raw_path), exist_ok=True)
 
             self.train_data_link = "https://raw.githubusercontent.com/Harsh-Arya-exe/Gemstone-data/refs/heads/main/train.csv"
             self.test_data_link = "https://raw.githubusercontent.com/Harsh-Arya-exe/Gemstone-data/refs/heads/main/train.csv"
 
             self.train_data = pd.read_csv(self.train_data_link)
             self.test_data = pd.read_csv(self.test_data_link)
-            
+
             logging.info("Saving the train and test files")
             self.train_data.to_csv(self.data_ingestion_config.train_path, index=False)
             self.test_data.to_csv(self.data_ingestion_config.test_path, index=False)
@@ -66,7 +66,7 @@ class DataIngestion:
 
             logging.info("Data Ingestion Completed")
         except Exception as e:
-            logging.info()
+            logging.info("Exception occured at Data Ingestion")
             raise CustomException(e, sys)
 
 
